@@ -1,4 +1,4 @@
-import {FormControl,InputLabel, Checkbox,MenuItem,Select, Box, Typography} from '@mui/material';
+import {FormControl,InputLabel,MenuItem,Select, Box, Typography} from '@mui/material';
 import TaskItem from './TaskItem';
 import { useSelector } from 'react-redux';
 import type { RootState } from '../../app/store';
@@ -24,11 +24,11 @@ function TaskList() {
   const availableCategories = [...new Set(tasks.map(task => task.category))];
   const availablePriorities = [...new Set(tasks.map(task => task.priority))];
 
-  const resetFilters = () => {
-    setStatusFilter('all');
-    setCategoryFilter('all');
-    setPriorityFilter('all');
-  };
+  // const resetFilters = () => {
+  //   setStatusFilter('all');
+  //   setCategoryFilter('all');
+  //   setPriorityFilter('all');
+  // };
 
   return (
     <>

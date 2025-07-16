@@ -21,11 +21,11 @@ const priorities: TaskPriority[] = ['Low', 'Medium', 'High'];
 
 type CreateTaskFormProps = {
   onClose: () => void;
-  onAdd: (task: Task) => void;
+  onAdd?: (task: Task) => void;
 };
 
 
-function CreateTaskForm({ onClose, onAdd }: CreateTaskFormProps) {
+function CreateTaskForm({ onClose }: CreateTaskFormProps) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   
