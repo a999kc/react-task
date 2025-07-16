@@ -13,37 +13,7 @@
 ## Архитектура проекта
 Эта структура построена по принципам FSD (Feature-Sliced Design) — архитектурного подхода к проектированию фронтенд-приложений. Он разделяет проект на логические слои:
 
-src/
-├── app/                        # Инициализация приложения
-│   ├── App.tsx                 # Корневой компонент
-│   ├── store.ts                # Создание стора (state management)
-│   ├── persistStorage.ts       # Работа с localStorage
-│            
-│
-├── entities/                   # Сущности 
-│   └── task/
-│       ├── api.ts              # API-интерфейсы
-│       └── types.ts            # Типизация сущности задачи
-│
-├── features/                   # Отдельные фичи 
-│   ├── models/
-│   │   └── taskSlice.ts        # Slice Redux
-│   └── ui/
-│       ├── CreateTaskForm.tsx  # Форма создания
-│       ├── Header.tsx          # Заголовок
-│       ├── TaskDetails.tsx     # Страница редактирования
-│       ├── TaskItem.tsx        # Карточка задачи
-│       └── TaskList.tsx        # Список задач
-│
-├── pages/                      # Страницы (Pages Layer)
-│   └── ...                     # Комбинируют фичи и сущности в страницы
-│
-├── shared/                     # Переиспользуемые части (Shared Layer)
-│   ├── styles/
-│   │   ├── normalize.css       # Сброс стилей
-│   │   └── theme.ts            # Темизация/переменные
-│   └── ui/
-│       └── logo.svg            # Общие иконки, компоненты и т.п.
+<img width="693" height="591" alt="image" src="https://github.com/user-attachments/assets/f9eaf026-9b0e-4e4a-9a89-d9651d497b92" />
 
 
 Вся логика управления задачами вынесена в стор, содержащий:
